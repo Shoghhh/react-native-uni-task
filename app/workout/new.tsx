@@ -48,7 +48,7 @@ export default function WorkoutForm() {
         style={styles.input}
         placeholder="Weight"
         keyboardType="numeric"
-        value={workout.weight?.toString()}
+        value={workout.weight?.toString() || ''}
         onChangeText={(text) => setWorkout({
           ...workout,
           weight: text ? parseFloat(text) : null
@@ -58,7 +58,7 @@ export default function WorkoutForm() {
         style={styles.input}
         placeholder="Reps"
         keyboardType="numeric"
-        value={workout.reps?.toString()}
+        value={workout.reps?.toString() || ''}
         onChangeText={(text) => setWorkout({
           ...workout,
           reps: text ? parseInt(text, 10) : null
@@ -68,7 +68,7 @@ export default function WorkoutForm() {
         style={styles.input}
         placeholder="Sets"
         keyboardType="numeric"
-        value={workout.sets?.toString()}
+        value={workout.sets?.toString() || ''}
         onChangeText={(text) => setWorkout({
           ...workout,
           sets: text ? parseInt(text, 10) : null
